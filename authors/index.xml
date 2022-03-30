@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Authors on Academia</title>
+    <title>Authors on Yusuf Yigit PILAVCI</title>
     <link>https://y2p.github.io/authors/</link>
-    <description>Recent content in Authors on Academia</description>
+    <description>Recent content in Authors on Yusuf Yigit PILAVCI</description>
     <generator>Source Themes academia (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>Copyright &amp;copy; {year}</copyright>
-    <lastBuildDate>Sun, 07 Apr 2019 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="https://y2p.github.io/authors/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,22 +14,12 @@
     <item>
       <title></title>
       <link>https://y2p.github.io/authors/admin/</link>
-      <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://y2p.github.io/authors/admin/</guid>
-      <description>&lt;p&gt;Nelson Bighetti is a professor of artificial intelligence at the Stanford AI Lab. His research interests include distributed robotics, mobile computing and programmable matter. He leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;../../img/certifacates.jpg&#34; alt=&#34;reviews&#34;&gt;&lt;/p&gt;
-&lt;p&gt;It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum. The point of using Lorem Ipsum. distracted by the readable content of a page.&lt;/p&gt;
+      <description>&lt;p&gt;I am a PhD student in the &lt;a href=&#34;http://www.gipsa-lab.fr/cics.php&#34;&gt;GAIA&lt;/a&gt; team of GIPSA Lab under the supervision of &lt;a href=&#34;http://www.gipsa-lab.fr/~nicolas.tremblay/&#34;&gt;Nicolas Tremblay&lt;/a&gt;, &lt;a href=&#34;https://barthesi.gricad-pages.univ-grenoble-alpes.fr/&#34;&gt;Simon Barthelmé&lt;/a&gt; and &lt;a href=&#34;https://www.gipsa-lab.grenoble-inp.fr/~bidou.amblard/&#34;&gt;Pierre-Olivier Amblard&lt;/a&gt;.
+In my thesis, I am working on &lt;a href=&#34;https://arxiv.org/abs/1104.5557&#34;&gt;Monte Carlo algorithms for linear algebra&lt;/a&gt; based on particular stochastic processes on graphs, called &lt;a href=&#34;https://arxiv.org/abs/1310.1723&#34;&gt;random spanning forests&lt;/a&gt;.&lt;/p&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>Robert Ford</title>
-      <link>https://y2p.github.io/authors/robert-ford/</link>
-      <pubDate>Tue, 01 Sep 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://y2p.github.io/authors/robert-ford/</guid>
-      <description></description>
     </item>
     
   </channel>

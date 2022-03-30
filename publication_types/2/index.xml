@@ -1,27 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>2 on Academia</title>
+    <title>2 on Yusuf Yigit PILAVCI</title>
     <link>https://y2p.github.io/publication_types/2/</link>
-    <description>Recent content in 2 on Academia</description>
+    <description>Recent content in 2 on Yusuf Yigit PILAVCI</description>
     <generator>Source Themes academia (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>Copyright &amp;copy; {year}</copyright>
-    <lastBuildDate>Tue, 01 Sep 2015 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 01 Nov 2020 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="https://y2p.github.io/publication_types/2/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>An example journal article</title>
-      <link>https://y2p.github.io/publication/journal-article/</link>
-      <pubDate>Tue, 01 Sep 2015 00:00:00 +0000</pubDate>
+      <title>Graph Tikhonov Regularization and Interpolation via Random Spanning Forests</title>
+      <link>https://y2p.github.io/publication/2020nov/</link>
+      <pubDate>Sun, 01 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://y2p.github.io/publication/journal-article/</guid>
-      <description>&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;Supplementary notes can be added here, including &lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34;&gt;code and math&lt;/a&gt;.&lt;/p&gt;
-</description>
+      <guid>https://y2p.github.io/publication/2020nov/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sparse-then-dense alignment-based 3d map reconstruction method for endoscopic capsule robots</title>
+      <link>https://y2p.github.io/publication/2017dec/</link>
+      <pubDate>Fri, 01 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://y2p.github.io/publication/2017dec/</guid>
+      <description></description>
     </item>
     
   </channel>
