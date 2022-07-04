@@ -7,10 +7,28 @@
     <generator>Source Themes academia (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>Copyright &amp;copy; {year}</copyright>
-    <lastBuildDate>Fri, 01 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 01 Mar 2022 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="https://y2p.github.io/publication_types/1/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Variance Reduction for Inverse Trace Estimation via Random Spanning Forests</title>
+      <link>https://y2p.github.io/publication/2022mar/</link>
+      <pubDate>Tue, 01 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://y2p.github.io/publication/2022mar/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Variance reduction in stochastic methods for large-scale regularised least-squares problems</title>
+      <link>https://y2p.github.io/publication/2021oct/</link>
+      <pubDate>Fri, 01 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://y2p.github.io/publication/2021oct/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Smoothing graph signals via random spanning forests</title>
