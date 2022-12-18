@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academia 4.3.1">
+  <meta name="generator" content="Hugo 0.96.0" />
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Yusuf Yigit PILAVCI">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="An extensive range of problems in machine learning deals with data structured over networks/graphs. The examples vary from drug discovery to traffic forecasting,  social network analysis to recommender systems, or epidemic analysis to natural language processing. Along with the exploding size and number of data, a big chunk of the proposed algorithms has focused on analyzing, representing and leveraging the network structures in the last decades. In many of them, the graph Laplacian is the central object. They are notable matrix representations of graphs that relate to various aspects. For example, by analyzing the Laplacian algebraically, one can measure the connectivity, count the number of spanning trees or generate a visualization of a graph. Further examples can be found in the problems of node clustering, graph sparsification, signal processing on graphs and many more. However, the algebraic analysis of Laplacian can be frustratingly time-consuming if the graph consists of a large number of nodes. Despite many numerical tools specialized for the graph Laplacian, in certain cases, the computational time remains one of the main issues.
+Random spanning forests (RSFs), a random process on graphs, is a probabilistic tool for analyzing graphs with strong links with the Laplacian. In a nutshell, RSFs provide meaningful random sketches (spanning forests) of the graph to analyze some properties of interest. These sketches are cheap to obtain by a variant of Wilson&#39;s algorithm. Moreover, by only looking at a few of them, one can deduce significant statistical and/or algebraic information on the overall graph. The existing applications of RSFs, including graph wavelet analysis, semi-supervised learning on graphs or centrality analysis, show that RSFs provide useful information while binding diverse aspects of graphs.
+In this manuscript, we present ways of leveraging the rich connections between RSFs and the graph Laplacian to speed up the algebraic analysis. In doing so, we propose randomized algorithms to approximate several quantities of interest, such as the regularized inverse of the Laplacian or effective resistances. Interestingly, these quantities are required in a wide range of applications on graphs, including graph signal filtering, hyper-parameter tuning, graph-based optimization and sparsification. We illustrate these methods on real-life networks and compare them with state-of-the-art methods. ">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://y2p.github.io/publication/phdthesis/">
+
+  
+
+
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#fc6f5c">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin="anonymous">
+    
+
+    
+
+  
+
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Open+Sans|Roboto+Mono&display=swap">
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/css/academia.min.76e69f7370e1e1222344c0109d841c44.css">
+
+  
+
+  
+  
+  
+  
+
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="https://y2p.github.io/publication/phdthesis/">
+
+  
+  
+  
+  
+    
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@PilavciYigit">
+  <meta property="twitter:creator" content="@PilavciYigit">
+  
+  <meta property="og:site_name" content="Yusuf Yigit PILAVCI">
+  <meta property="og:url" content="https://y2p.github.io/publication/phdthesis/">
+  <meta property="og:title" content="Wilson&#39;s Algorithm for Randomized Linear Algebra | Yusuf Yigit PILAVCI">
+  <meta property="og:description" content="An extensive range of problems in machine learning deals with data structured over networks/graphs. The examples vary from drug discovery to traffic forecasting,  social network analysis to recommender systems, or epidemic analysis to natural language processing. Along with the exploding size and number of data, a big chunk of the proposed algorithms has focused on analyzing, representing and leveraging the network structures in the last decades. In many of them, the graph Laplacian is the central object. They are notable matrix representations of graphs that relate to various aspects. For example, by analyzing the Laplacian algebraically, one can measure the connectivity, count the number of spanning trees or generate a visualization of a graph. Further examples can be found in the problems of node clustering, graph sparsification, signal processing on graphs and many more. However, the algebraic analysis of Laplacian can be frustratingly time-consuming if the graph consists of a large number of nodes. Despite many numerical tools specialized for the graph Laplacian, in certain cases, the computational time remains one of the main issues.
+Random spanning forests (RSFs), a random process on graphs, is a probabilistic tool for analyzing graphs with strong links with the Laplacian. In a nutshell, RSFs provide meaningful random sketches (spanning forests) of the graph to analyze some properties of interest. These sketches are cheap to obtain by a variant of Wilson&#39;s algorithm. Moreover, by only looking at a few of them, one can deduce significant statistical and/or algebraic information on the overall graph. The existing applications of RSFs, including graph wavelet analysis, semi-supervised learning on graphs or centrality analysis, show that RSFs provide useful information while binding diverse aspects of graphs.
+In this manuscript, we present ways of leveraging the rich connections between RSFs and the graph Laplacian to speed up the algebraic analysis. In doing so, we propose randomized algorithms to approximate several quantities of interest, such as the regularized inverse of the Laplacian or effective resistances. Interestingly, these quantities are required in a wide range of applications on graphs, including graph signal filtering, hyper-parameter tuning, graph-based optimization and sparsification. We illustrate these methods on real-life networks and compare them with state-of-the-art methods. "><meta property="og:image" content="https://y2p.github.io/publication/phdthesis/featured.png">
+  <meta property="twitter:image" content="https://y2p.github.io/publication/phdthesis/featured.png"><meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2022-11-15T00:00:00&#43;00:00">
+  
+  <meta property="article:modified_time" content="2022-11-15T00:00:00&#43;00:00">
+  
+
+  
+
+
+  
+
+
+
+
+
+  <title>Wilson&#39;s Algorithm for Randomized Linear Algebra | Yusuf Yigit PILAVCI</title>
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/">Yusuf Yigit PILAVCI</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"><span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+      
+      
+      <ul class="navbar-nav ml-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#publications"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#activities"><span>Talks</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#contact"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/files/cv/yyp_resume.pdf"><span>CV</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+
+        
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+        </li>
+        
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <div class="pub" itemscope itemtype="http://schema.org/CreativeWork">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container split-header">
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+        <img class="img-fluid w-100" src="/publication/phdthesis/featured_hubdd1f052c29cb76d8ab1bca45b1c33a3_23810_680x500_fill_q90_lanczos_smart1_3.png" itemprop="image" alt="">
+        
+    </div>
+    <div class="col-lg-8">
+      <h1 itemprop="name">Wilson&#39;s Algorithm for Randomized Linear Algebra</h1>
+
+      
+
+      
+
+
+
+<meta content="2022-11-15 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2022-11-15 00:00:00 &#43;0000 UTC" itemprop="dateModified">
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+
+
+  <span itemprop="author name" itemtype="http://schema.org/Person"><a href="/authors/admin/">Yusuf Yigit PILAVCI</a></span>
+
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    <time>November 2022</time>
+  </span>
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+    
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://y2p.github.io/publication/phdthesis/&amp;text=Wilson&amp;#39;s%20Algorithm%20for%20Randomized%20Linear%20Algebra" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://y2p.github.io/publication/phdthesis/&amp;t=Wilson&amp;#39;s%20Algorithm%20for%20Randomized%20Linear%20Algebra" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Wilson&amp;#39;s%20Algorithm%20for%20Randomized%20Linear%20Algebra&amp;body=https://y2p.github.io/publication/phdthesis/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://y2p.github.io/publication/phdthesis/&amp;title=Wilson&amp;#39;s%20Algorithm%20for%20Randomized%20Linear%20Algebra" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=Wilson&amp;#39;s%20Algorithm%20for%20Randomized%20Linear%20Algebra%20https://y2p.github.io/publication/phdthesis/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://y2p.github.io/publication/phdthesis/&amp;title=Wilson&amp;#39;s%20Algorithm%20for%20Randomized%20Linear%20Algebra" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="btn-links mb-3">
+  
+  
+
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+<a class="btn btn-outline-primary my-1 mr-1" href="/articles/thesis.pdf" target="_blank" rel="noopener">
+  PDF
+</a>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+<a class="btn btn-outline-primary my-1 mr-1" href="/files/slides/thesis.pdf" target="_blank" rel="noopener">
+  Slides
+</a>
+
+
+
+
+
+
+
+</div>
+
+
+    </div>
+    
+    </div>
+  </div>
+</div>
+
+  <div class="article-container">
+
+    
+    <h3>Abstract</h3>
+    <p class="pub-abstract" itemprop="text">An extensive range of problems in machine learning deals with data structured over networks/graphs. The examples vary from drug discovery to traffic forecasting,  social network analysis to recommender systems, or epidemic analysis to natural language processing. Along with the exploding size and number of data, a big chunk of the proposed algorithms has focused on analyzing, representing and leveraging the network structures in the last decades. In many of them, the graph Laplacian is the central object. They are notable matrix representations of graphs that relate to various aspects. For example, by analyzing the Laplacian algebraically, one can measure the connectivity, count the number of spanning trees or generate a visualization of a graph. Further examples can be found in the problems of node clustering, graph sparsification, signal processing on graphs and many more. However, the algebraic analysis of Laplacian can be frustratingly time-consuming if the graph consists of a large number of nodes. Despite many numerical tools specialized for the graph Laplacian, in certain cases, the computational time remains one of the main issues.
+Random spanning forests (RSFs), a random process on graphs, is a probabilistic tool for analyzing graphs with strong links with the Laplacian. In a nutshell, RSFs provide meaningful random sketches (spanning forests) of the graph to analyze some properties of interest. These sketches are cheap to obtain by a variant of Wilson&rsquo;s algorithm. Moreover, by only looking at a few of them, one can deduce significant statistical and/or algebraic information on the overall graph. The existing applications of RSFs, including graph wavelet analysis, semi-supervised learning on graphs or centrality analysis, show that RSFs provide useful information while binding diverse aspects of graphs.
+In this manuscript, we present ways of leveraging the rich connections between RSFs and the graph Laplacian to speed up the algebraic analysis. In doing so, we propose randomized algorithms to approximate several quantities of interest, such as the regularized inverse of the Laplacian or effective resistances. Interestingly, these quantities are required in a wide range of applications on graphs, including graph signal filtering, hyper-parameter tuning, graph-based optimization and sparsification. We illustrate these methods on real-life networks and compare them with state-of-the-art methods.</p>
+    
+
+    
+    <div class="row">
+      <div class="col-md-10 mx-auto">
+        <div class="row">
+          <div class="col-12 col-md-3 pub-row-heading">Type</div>
+          <div class="col-12 col-md-9">
+            
+            
+            <a href="/publication/#7">
+              Thesis
+            </a>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="d-md-none space-below"></div>
+    
+
+    
+
+    <div class="space-below"></div>
+
+    <div class="article-style"></div>
+
+    
+
+
+    
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  <div class="media author-card" itemscope itemtype="http://schema.org/Person">
+    
+
+    <div class="media-body">
+      <h5 class="card-title" itemprop="name"><a href="https://y2p.github.io">Yusuf Yigit PILAVCI</a></h5>
+      
+      
+      <ul class="network-icon" aria-hidden="true">
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="/#contact" >
+              <i class="fas fa-envelope"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://twitter.com/PilavciYigit" target="_blank" rel="noopener">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://scholar.google.com/citations?user=T36ckAUAAAAJ&amp;hl=en" target="_blank" rel="noopener">
+              <i class="ai ai-google-scholar"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://github.com/Y2P" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://gricad-gitlab.univ-grenoble-alpes.fr/pilavciy" target="_blank" rel="noopener">
+              <i class="fab fa-gitlab"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+
+
+
+  </div>
+</div>
+
+
+
+      
+
+    
+    
+    
+    <script src="/js/mathjax-config.js"></script>
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
+        
+      
+
+      
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_CHTML-full" integrity="sha256-GhM+5JHb6QUzOQPXSJLEWP7R73CbkisjzK5Eyij4U9w=" crossorigin="anonymous" async></script>
+      
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin="anonymous"></script>
+    
+
+    
+    
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script src="/js/academia.min.f2fef7019062832f47125d7c2fc68a3b.js"></script>
+
+    
+
+
+
+
+
+
+  
+  <div class="container">
+    <footer class="site-footer">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6 mb-4 mb-md-0">
+        
+        <p class="mb-0">
+          Copyright © 2022 &middot; 
+          Powered by
+          <a href="https://gethugothemes.com" target="_blank" rel="noopener">Gethugothemes</a>
+        </p>
+      </div>
+      <div class="col-md-6">
+        <ul class="list-inline network-icon text-right mb-0">
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <li class="list-inline-item">
+            <a href="https://twitter.com/PilavciYigit" target="_blank" rel="noopener" title="DM Me"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
