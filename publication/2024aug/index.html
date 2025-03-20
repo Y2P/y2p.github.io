@@ -29,10 +29,10 @@
   
     
   
-  <meta name="description" content="Another facet of the elegant link between random processes on graphs and Laplacian-based numerical linear algebra is uncovered: based on random spanning forests, novel Monte-Carlo estimators for graph signal smoothing are proposed. These random forests are sampled efficiently via a variant of Wilson&#39;s algorithm --in time linear in the number of edges. The theoretical variance of the proposed estimators are analyzed, and their application to several problems are considered, such as Tikhonov denoising of graph signals or semi-supervised learning for node classification on graphs.">
+  <meta name="description" content="We propose two formulations to leverage the geometric properties of bivariate signals for dealing with the denoising problem. In doing so, we use the instantaneous Stokes parameters to incorporate the polarization state of the signal. While the first formulation exploits the statistics of the Stokes representation in a Bayesian setting, the second uses a kernel regression formulation to impose locally smooth time-varying polarization properties. In turn, we obtain two formulations that allow us to use both signal and polarization domain regularization for denoising a bivariate signal. The solutions to them exploit the polarization information efficiently as demonstrated in the numerical simulations.">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://y2p.github.io/publication/2020may/">
+  <link rel="alternate" hreflang="en-us" href="https://y2p.github.io/publication/2024aug/">
 
   
 
@@ -100,7 +100,7 @@
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="https://y2p.github.io/publication/2020may/">
+  <link rel="canonical" href="https://y2p.github.io/publication/2024aug/">
 
   
   
@@ -115,26 +115,26 @@
   <meta property="twitter:creator" content="@PilavciYigit">
   
   <meta property="og:site_name" content="Yusuf Yigit PILAVCI">
-  <meta property="og:url" content="https://y2p.github.io/publication/2020may/">
-  <meta property="og:title" content="Smoothing graph signals via random spanning forests | Yusuf Yigit PILAVCI">
-  <meta property="og:description" content="Another facet of the elegant link between random processes on graphs and Laplacian-based numerical linear algebra is uncovered: based on random spanning forests, novel Monte-Carlo estimators for graph signal smoothing are proposed. These random forests are sampled efficiently via a variant of Wilson&#39;s algorithm --in time linear in the number of edges. The theoretical variance of the proposed estimators are analyzed, and their application to several problems are considered, such as Tikhonov denoising of graph signals or semi-supervised learning for node classification on graphs."><meta property="og:image" content="https://y2p.github.io/img/icon-192.png">
+  <meta property="og:url" content="https://y2p.github.io/publication/2024aug/">
+  <meta property="og:title" content="Denoising bivariate signals via smoothing and polarization priors | Yusuf Yigit PILAVCI">
+  <meta property="og:description" content="We propose two formulations to leverage the geometric properties of bivariate signals for dealing with the denoising problem. In doing so, we use the instantaneous Stokes parameters to incorporate the polarization state of the signal. While the first formulation exploits the statistics of the Stokes representation in a Bayesian setting, the second uses a kernel regression formulation to impose locally smooth time-varying polarization properties. In turn, we obtain two formulations that allow us to use both signal and polarization domain regularization for denoising a bivariate signal. The solutions to them exploit the polarization information efficiently as demonstrated in the numerical simulations."><meta property="og:image" content="https://y2p.github.io/img/icon-192.png">
   <meta property="twitter:image" content="https://y2p.github.io/img/icon-192.png"><meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2020-05-01T00:00:00&#43;00:00">
+  <meta property="article:published_time" content="2024-08-26T00:00:00&#43;00:00">
   
-  <meta property="article:modified_time" content="2020-05-01T00:00:00&#43;00:00">
+  <meta property="article:modified_time" content="2024-08-26T00:00:00&#43;00:00">
   
-
-  
-
 
   
 
 
+  
 
 
 
-  <title>Smoothing graph signals via random spanning forests | Yusuf Yigit PILAVCI</title>
+
+
+  <title>Denoising bivariate signals via smoothing and polarization priors | Yusuf Yigit PILAVCI</title>
 
 </head>
 
@@ -369,7 +369,7 @@
     
     
     <div class="article-container py-3">
-      <h1 itemprop="name">Smoothing graph signals via random spanning forests</h1>
+      <h1 itemprop="name">Denoising bivariate signals via smoothing and polarization priors</h1>
 
       
 
@@ -378,8 +378,8 @@
 
 
 
-<meta content="2020-05-01 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-<meta content="2020-05-01 00:00:00 &#43;0000 UTC" itemprop="dateModified">
+<meta content="2024-08-26 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2024-08-26 00:00:00 &#43;0000 UTC" itemprop="dateModified">
 
 <div class="article-metadata">
 
@@ -392,7 +392,7 @@
 
 
 
-  <span itemprop="author name" itemtype="http://schema.org/Person"><a href="/authors/admin/">Yusuf Yigit PILAVCI</a></span>, <span itemprop="author name" itemtype="http://schema.org/Person">Pierre-Olivier Amblard</span>, <span itemprop="author name" itemtype="http://schema.org/Person">Simon Barthelme</span>, <span itemprop="author name" itemtype="http://schema.org/Person">Nicolas Tremblay</span>
+  <span itemprop="author name" itemtype="http://schema.org/Person"><a href="/authors/admin/">Yusuf Yigit PILAVCI</a></span>, <span itemprop="author name" itemtype="http://schema.org/Person">Jeremie BOULANGER</span>, <span itemprop="author name" itemtype="http://schema.org/Person">Pierre-Antoine THOUVENIN</span>, <span itemprop="author name" itemtype="http://schema.org/Person">Pierre CHAINAIS</span>
 
   </div>
   
@@ -404,7 +404,7 @@
     
       
     
-    <time>May 2020</time>
+    <time>August 2024</time>
   </span>
   
 
@@ -431,7 +431,7 @@
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=https://y2p.github.io/publication/2020may/&amp;text=Smoothing%20graph%20signals%20via%20random%20spanning%20forests" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=https://y2p.github.io/publication/2024aug/&amp;text=Denoising%20bivariate%20signals%20via%20smoothing%20and%20polarization%20priors" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -444,7 +444,7 @@
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=https://y2p.github.io/publication/2020may/&amp;t=Smoothing%20graph%20signals%20via%20random%20spanning%20forests" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=https://y2p.github.io/publication/2024aug/&amp;t=Denoising%20bivariate%20signals%20via%20smoothing%20and%20polarization%20priors" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook-f"></i>
         </a>
       </li>
@@ -457,7 +457,7 @@
       
       
       <li>
-        <a href="mailto:?subject=Smoothing%20graph%20signals%20via%20random%20spanning%20forests&amp;body=https://y2p.github.io/publication/2020may/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=Denoising%20bivariate%20signals%20via%20smoothing%20and%20polarization%20priors&amp;body=https://y2p.github.io/publication/2024aug/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -470,7 +470,7 @@
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https://y2p.github.io/publication/2020may/&amp;title=Smoothing%20graph%20signals%20via%20random%20spanning%20forests" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=https://y2p.github.io/publication/2024aug/&amp;title=Denoising%20bivariate%20signals%20via%20smoothing%20and%20polarization%20priors" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -483,7 +483,7 @@
       
       
       <li>
-        <a href="https://web.whatsapp.com/send?text=Smoothing%20graph%20signals%20via%20random%20spanning%20forests%20https://y2p.github.io/publication/2020may/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="https://web.whatsapp.com/send?text=Denoising%20bivariate%20signals%20via%20smoothing%20and%20polarization%20priors%20https://y2p.github.io/publication/2024aug/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -496,7 +496,7 @@
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=https://y2p.github.io/publication/2020may/&amp;title=Smoothing%20graph%20signals%20via%20random%20spanning%20forests" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=https://y2p.github.io/publication/2024aug/&amp;title=Denoising%20bivariate%20signals%20via%20smoothing%20and%20polarization%20priors" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
@@ -540,7 +540,7 @@
 
 
 
-<a class="btn btn-outline-primary my-1 mr-1" href="/articles/smoothingRSF.pdf" target="_blank" rel="noopener">
+<a class="btn btn-outline-primary my-1 mr-1" href="https://eurasip.org/Proceedings/Eusipco/Eusipco2024/pdfs/0002602.pdf" target="_blank" rel="noopener">
   PDF
 </a>
 
@@ -551,7 +551,7 @@
   
     
   
-<a class="btn btn-outline-primary my-1 mr-1" href="/codes/smoothingRSF.zip" target="_blank" rel="noopener">
+<a class="btn btn-outline-primary my-1 mr-1" href="https://gitlab.cristal.univ-lille.fr/ypilavci/denoising-polarization" target="_blank" rel="noopener">
   Code
 </a>
 
@@ -560,23 +560,11 @@
 
 
 
-  
-  
-    
-  
-<a class="btn btn-outline-primary my-1 mr-1" href="/files/slides/icassp20_slides.pdf" target="_blank" rel="noopener">
-  Poster
-</a>
 
 
 
 
 
-
-
-<a class="btn btn-outline-primary my-1 mr-1" href="https://doi.org/10.1109/ICASSP40776.2020.9054497" target="_blank" rel="noopener">
-  DOI
-</a>
 
 
 
@@ -593,7 +581,7 @@
 
     
     <h3>Abstract</h3>
-    <p class="pub-abstract" itemprop="text">Another facet of the elegant link between random processes on graphs and Laplacian-based numerical linear algebra is uncovered: based on random spanning forests, novel Monte-Carlo estimators for graph signal smoothing are proposed. These random forests are sampled efficiently via a variant of Wilson&rsquo;s algorithm &ndash;in time linear in the number of edges. The theoretical variance of the proposed estimators are analyzed, and their application to several problems are considered, such as Tikhonov denoising of graph signals or semi-supervised learning for node classification on graphs.</p>
+    <p class="pub-abstract" itemprop="text">We propose two formulations to leverage the geometric properties of bivariate signals for dealing with the denoising problem. In doing so, we use the instantaneous Stokes parameters to incorporate the polarization state of the signal. While the first formulation exploits the statistics of the Stokes representation in a Bayesian setting, the second uses a kernel regression formulation to impose locally smooth time-varying polarization properties. In turn, we obtain two formulations that allow us to use both signal and polarization domain regularization for denoising a bivariate signal. The solutions to them exploit the polarization information efficiently as demonstrated in the numerical simulations.</p>
     
 
     
@@ -621,7 +609,7 @@
       <div class="col-md-10">
         <div class="row">
           <div class="col-12 col-md-3 pub-row-heading">Publication</div>
-          <div class="col-12 col-md-9">45th International Conference on Acoustics, Speech, and Signal Processing</div>
+          <div class="col-12 col-md-9">32nd European Signal Processing Conference (EUSIPCO 2024)</div>
         </div>
       </div>
       <div class="col-md-1"></div>
