@@ -1,32 +1,109 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Yusuf Yigit PILAVCI</title>
     <link>https://y2p.github.io/</link>
     <description>Recent content on Yusuf Yigit PILAVCI</description>
-    <generator>Source Themes academia (https://sourcethemes.com/academic/)</generator>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright &amp;copy; {year}</copyright>
-    <lastBuildDate>Mon, 26 Aug 2024 00:00:00 +0000</lastBuildDate>
-    
-	    <atom:link href="https://y2p.github.io/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 08 Jun 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://y2p.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Publications</title>
-      <link>https://y2p.github.io/publication/</link>
-      <pubDate>Mon, 26 Aug 2024 00:00:00 +0000</pubDate>
+      <title>Denoising bivariate signals via smoothing and polarization priors</title>
+      <link>https://y2p.github.io/publication/2025jun/</link>
+      <pubDate>Sun, 08 Jun 2025 00:00:00 +0000</pubDate>
       
-      <guid>https://y2p.github.io/publication/</guid>
+      <guid>https://y2p.github.io/publication/2025jun/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Authors</title>
-      <link>https://y2p.github.io/authors/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>Denoising bivariate signals via smoothing and polarization priors</title>
+      <link>https://y2p.github.io/publication/2025sep/</link>
+      <pubDate>Sun, 08 Jun 2025 00:00:00 +0000</pubDate>
       
-      <guid>https://y2p.github.io/authors/</guid>
+      <guid>https://y2p.github.io/publication/2025sep/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Denoising bivariate signals via smoothing and polarization priors</title>
+      <link>https://y2p.github.io/publication/2024aug/</link>
+      <pubDate>Mon, 26 Aug 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://y2p.github.io/publication/2024aug/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Wilson&#39;s Algorithm for Randomized Linear Algebra</title>
+      <link>https://y2p.github.io/publication/phdthesis/</link>
+      <pubDate>Tue, 15 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://y2p.github.io/publication/phdthesis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Variance Reduction for Inverse Trace Estimation via Random Spanning Forests</title>
+      <link>https://y2p.github.io/publication/2022mar/</link>
+      <pubDate>Tue, 06 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://y2p.github.io/publication/2022mar/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Variance reduction in stochastic methods for large-scale regularised least-squares problems</title>
+      <link>https://y2p.github.io/publication/2021oct/</link>
+      <pubDate>Mon, 29 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://y2p.github.io/publication/2021oct/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Graph Tikhonov Regularization and Interpolation via Random Spanning Forests</title>
+      <link>https://y2p.github.io/publication/2020nov/</link>
+      <pubDate>Fri, 28 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://y2p.github.io/publication/2020nov/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Smoothing graph signals via random spanning forests</title>
+      <link>https://y2p.github.io/publication/2020may/</link>
+      <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://y2p.github.io/publication/2020may/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Graph Domain Adaptation with Localized Graph Signal Representations</title>
+      <link>https://y2p.github.io/publication/2019nov/</link>
+      <pubDate>Fri, 01 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://y2p.github.io/publication/2019nov/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Spectral graph wavelet transform as feature extractor for machine learning in neuroimaging</title>
+      <link>https://y2p.github.io/publication/2019may/</link>
+      <pubDate>Wed, 01 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://y2p.github.io/publication/2019may/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sparse-then-dense alignment-based 3d map reconstruction method for endoscopic capsule robots</title>
+      <link>https://y2p.github.io/publication/2017dec/</link>
+      <pubDate>Fri, 01 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://y2p.github.io/publication/2017dec/</guid>
       <description></description>
     </item>
     
