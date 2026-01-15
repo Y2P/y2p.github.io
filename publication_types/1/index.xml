@@ -13,20 +13,20 @@
     
     
     <item>
-      <title>Denoising bivariate signals via smoothing and polarization priors</title>
-      <link>https://y2p.github.io/publication/2025jun/</link>
-      <pubDate>Sun, 08 Jun 2025 00:00:00 +0000</pubDate>
-      
-      <guid>https://y2p.github.io/publication/2025jun/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Denoising bivariate signals via smoothing and polarization priors</title>
+      <title>An ADMM algorithm to restore bivariate signals with joint time and covariance regularization</title>
       <link>https://y2p.github.io/publication/2025sep/</link>
       <pubDate>Sun, 08 Jun 2025 00:00:00 +0000</pubDate>
       
       <guid>https://y2p.github.io/publication/2025sep/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Time and covariance smoothing for restoration of bivariate signals</title>
+      <link>https://y2p.github.io/publication/2025jun/</link>
+      <pubDate>Sun, 08 Jun 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://y2p.github.io/publication/2025jun/</guid>
       <description></description>
     </item>
     
