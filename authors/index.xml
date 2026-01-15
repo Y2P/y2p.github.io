@@ -1,11 +1,29 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Authors on Yusuf Yigit PILAVCI</title>
     <link>https://y2p.github.io/authors/</link>
     <description>Recent content in Authors on Yusuf Yigit PILAVCI</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Source Themes academia (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
-    <copyright>Copyright &amp;copy; {year}</copyright><atom:link href="https://y2p.github.io/authors/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>Copyright &amp;copy; {year}</copyright>
+    
+	    <atom:link href="https://y2p.github.io/authors/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>https://y2p.github.io/authors/admin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://y2p.github.io/authors/admin/</guid>
+      <description>&lt;p&gt;I am currently a post-doctoral fellow at IMT Nord Europe in collaboration with &lt;a href=&#34;https://vitier.github.io/&#34;&gt;Vincent Itier&lt;/a&gt;.
+I work on detection of AI-generated images, focusing on adaptation of the detection models for different AI generators.
+Before I was a post-doctoral fellow in the CRIStAL Lab in collaboration with &lt;a href=&#34;http://pierrechainais.ec-lille.fr/&#34;&gt;Pierre Chainais&lt;/a&gt;, &lt;a href=&#34;https://pthouvenin.github.io/&#34;&gt;Pierre-Antoine Thevenin&lt;/a&gt; and &lt;a href=&#34;https://pro.univ-lille.fr/jeremie-boulanger&#34;&gt;Jeremie Boulanger&lt;/a&gt;. I worked on geometric/polarization priors for solving inverse problems bivariate signals such as reconstruction of gravitational waves.
+Previously, I did my PhD in the &lt;a href=&#34;http://www.gipsa-lab.fr/cics.php&#34;&gt;GAIA&lt;/a&gt; team of GIPSA Lab under the supervision of &lt;a href=&#34;http://www.gipsa-lab.fr/~nicolas.tremblay/&#34;&gt;Nicolas Tremblay&lt;/a&gt;, &lt;a href=&#34;https://barthesi.gricad-pages.univ-grenoble-alpes.fr/&#34;&gt;Simon Barthelmé&lt;/a&gt; and &lt;a href=&#34;https://www.gipsa-lab.grenoble-inp.fr/~bidou.amblard/&#34;&gt;Pierre-Olivier Amblard&lt;/a&gt;.
+In my thesis, I worked on Monte Carlo algorithms for linear algebra based on a particular stochastic process on graphs, called random spanning forests. &lt;a href=&#34;publication/phdthesis/&#34;&gt;See thesis&lt;/a&gt; for more details.&lt;/p&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>
