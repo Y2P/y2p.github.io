@@ -29,10 +29,15 @@
   
     
   
-  <meta name="description" content="Novel Monte Carlo estimators are proposed to solve both the Tikhonov regularization (TR) and the interpolation problems on graphs. These estimators are based on random spanning forests (RSF), the theoretical properties of which enable to analyze the estimators&#39; theoretical mean and variance. We also show how to perform hyperparameter tuning for these RSF-based estimators. TR is a component in many well-known algorithms, and we show how the proposed estimators can be easily adapted to avoid expensive intermediate steps in generalized semi-supervised learning, label propagation, Newton&#39;s method and iteratively reweighted least squares. In the experiments, we illustrate the proposed methods on several problems and provide observations on their run time.">
+  <meta name="description" content="An extensive range of problems in machine learning deals with data structured over networks/graphs. The examples vary from drug discovery to traffic forecasting, social network analysis to recommender systems, or epidemic analysis to natural language processing. Along with the exploding size and number of data, a big chunk of the proposed algorithms has focused on analyzing, representing and leveraging the network structures in the last decades. In many of them, the graph Laplacian is the central object. They are notable matrix representations of graphs that relate to various aspects. For example, by analyzing the Laplacian algebraically, one can measure the connectivity, count the number of spanning trees or generate a visualization of a graph. Further examples can be found in the problems of node clustering, graph sparsification, signal processing on graphs and many more. However, the algebraic analysis of Laplacian can be frustratingly time-consuming if the graph consists of a large number of nodes. Despite many numerical tools specialized for the graph Laplacian, in certain cases, the computational time remains one of the main issues.
+
+Random spanning forests (RSFs), a random process on graphs, is a probabilistic tool for analyzing graphs with strong links with the Laplacian. In a nutshell, RSFs provide meaningful random sketches (spanning forests) of the graph to analyze some properties of interest. These sketches are cheap to obtain by a variant of Wilson&#39;s algorithm. Moreover, by only looking at a few of them, one can deduce significant statistical and/or algebraic information on the overall graph. The existing applications of RSFs, including graph wavelet analysis, semi-supervised learning on graphs or centrality analysis, show that RSFs provide useful information while binding diverse aspects of graphs.
+
+In this manuscript, we present ways of leveraging the rich connections between RSFs and the graph Laplacian to speed up the algebraic analysis. In doing so, we propose randomized algorithms to approximate several quantities of interest, such as the regularized inverse of the Laplacian or effective resistances. Interestingly, these quantities are required in a wide range of applications on graphs, including graph signal filtering, hyper-parameter tuning, graph-based optimization and sparsification. We illustrate these methods on real-life networks and compare them with state-of-the-art methods.
+">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://y2p.github.io/publication/2020nov/">
+  <link rel="alternate" hreflang="en-us" href="https://y2p.github.io/publication/phdthesis/">
 
   
 
@@ -100,41 +105,45 @@
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="https://y2p.github.io/publication/2020nov/">
+  <link rel="canonical" href="https://y2p.github.io/publication/phdthesis/">
 
   
   
   
   
     
-    
   
-  <meta property="twitter:card" content="summary">
+  <meta property="twitter:card" content="summary_large_image">
   
   <meta property="twitter:site" content="@PilavciYigit">
   <meta property="twitter:creator" content="@PilavciYigit">
   
   <meta property="og:site_name" content="Yusuf Yigit PILAVCI">
-  <meta property="og:url" content="https://y2p.github.io/publication/2020nov/">
-  <meta property="og:title" content="Graph Tikhonov Regularization and Interpolation via Random Spanning Forests | Yusuf Yigit PILAVCI">
-  <meta property="og:description" content="Novel Monte Carlo estimators are proposed to solve both the Tikhonov regularization (TR) and the interpolation problems on graphs. These estimators are based on random spanning forests (RSF), the theoretical properties of which enable to analyze the estimators&#39; theoretical mean and variance. We also show how to perform hyperparameter tuning for these RSF-based estimators. TR is a component in many well-known algorithms, and we show how the proposed estimators can be easily adapted to avoid expensive intermediate steps in generalized semi-supervised learning, label propagation, Newton&#39;s method and iteratively reweighted least squares. In the experiments, we illustrate the proposed methods on several problems and provide observations on their run time."><meta property="og:image" content="https://y2p.github.io/img/icon-192.png">
-  <meta property="twitter:image" content="https://y2p.github.io/img/icon-192.png"><meta property="og:locale" content="en-us">
+  <meta property="og:url" content="https://y2p.github.io/publication/phdthesis/">
+  <meta property="og:title" content="Wilson&#39;s Algorithm for Randomized Linear Algebra | Yusuf Yigit PILAVCI">
+  <meta property="og:description" content="An extensive range of problems in machine learning deals with data structured over networks/graphs. The examples vary from drug discovery to traffic forecasting, social network analysis to recommender systems, or epidemic analysis to natural language processing. Along with the exploding size and number of data, a big chunk of the proposed algorithms has focused on analyzing, representing and leveraging the network structures in the last decades. In many of them, the graph Laplacian is the central object. They are notable matrix representations of graphs that relate to various aspects. For example, by analyzing the Laplacian algebraically, one can measure the connectivity, count the number of spanning trees or generate a visualization of a graph. Further examples can be found in the problems of node clustering, graph sparsification, signal processing on graphs and many more. However, the algebraic analysis of Laplacian can be frustratingly time-consuming if the graph consists of a large number of nodes. Despite many numerical tools specialized for the graph Laplacian, in certain cases, the computational time remains one of the main issues.
+
+Random spanning forests (RSFs), a random process on graphs, is a probabilistic tool for analyzing graphs with strong links with the Laplacian. In a nutshell, RSFs provide meaningful random sketches (spanning forests) of the graph to analyze some properties of interest. These sketches are cheap to obtain by a variant of Wilson&#39;s algorithm. Moreover, by only looking at a few of them, one can deduce significant statistical and/or algebraic information on the overall graph. The existing applications of RSFs, including graph wavelet analysis, semi-supervised learning on graphs or centrality analysis, show that RSFs provide useful information while binding diverse aspects of graphs.
+
+In this manuscript, we present ways of leveraging the rich connections between RSFs and the graph Laplacian to speed up the algebraic analysis. In doing so, we propose randomized algorithms to approximate several quantities of interest, such as the regularized inverse of the Laplacian or effective resistances. Interestingly, these quantities are required in a wide range of applications on graphs, including graph signal filtering, hyper-parameter tuning, graph-based optimization and sparsification. We illustrate these methods on real-life networks and compare them with state-of-the-art methods.
+"><meta property="og:image" content="https://y2p.github.io/publication/phdthesis/featured.png">
+  <meta property="twitter:image" content="https://y2p.github.io/publication/phdthesis/featured.png"><meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2021-05-28T00:00:00&#43;00:00">
+  <meta property="article:published_time" content="2022-11-15T00:00:00&#43;00:00">
   
-  <meta property="article:modified_time" content="2021-05-28T00:00:00&#43;00:00">
+  <meta property="article:modified_time" content="2022-11-15T00:00:00&#43;00:00">
   
-
-  
-
 
   
 
 
+  
 
 
 
-  <title>Graph Tikhonov Regularization and Interpolation via Random Spanning Forests | Yusuf Yigit PILAVCI</title>
+
+
+  <title>Wilson&#39;s Algorithm for Randomized Linear Algebra | Yusuf Yigit PILAVCI</title>
 
 </head>
 
@@ -363,23 +372,24 @@
 
 
 
-    
 
-    
-    
-    
-    <div class="article-container py-3">
-      <h1 itemprop="name">Graph Tikhonov Regularization and Interpolation via Random Spanning Forests</h1>
+<div class="container split-header">
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+        <img class="img-fluid w-100" src="/publication/phdthesis/featured_hubdd1f052c29cb76d8ab1bca45b1c33a3_23810_680x500_fill_q90_lanczos_smart1_3.png" itemprop="image" alt="">
+        
+    </div>
+    <div class="col-lg-8">
+      <h1 itemprop="name">Wilson&#39;s Algorithm for Randomized Linear Algebra</h1>
 
       
 
       
-      
 
 
 
-<meta content="2021-05-28 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-<meta content="2021-05-28 00:00:00 &#43;0000 UTC" itemprop="dateModified">
+<meta content="2022-11-15 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2022-11-15 00:00:00 &#43;0000 UTC" itemprop="dateModified">
 
 <div class="article-metadata">
 
@@ -392,7 +402,7 @@
 
 
 
-  <span itemprop="author name" itemtype="http://schema.org/Person"><a href="/authors/admin/">Yusuf Yigit PILAVCI</a></span>, <span itemprop="author name" itemtype="http://schema.org/Person">Pierre-Olivier Amblard</span>, <span itemprop="author name" itemtype="http://schema.org/Person">Simon Barthelme</span>, <span itemprop="author name" itemtype="http://schema.org/Person">Nicolas Tremblay</span>
+  <span itemprop="author name" itemtype="http://schema.org/Person"><a href="/authors/admin/">Yusuf Yigit PILAVCI</a></span>
 
   </div>
   
@@ -404,7 +414,7 @@
     
       
     
-    <time>May 2021</time>
+    <time>November 2022</time>
   </span>
   
 
@@ -431,7 +441,7 @@
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=https://y2p.github.io/publication/2020nov/&amp;text=Graph%20Tikhonov%20Regularization%20and%20Interpolation%20via%20Random%20Spanning%20Forests" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=https://y2p.github.io/publication/phdthesis/&amp;text=Wilson&amp;#39;s%20Algorithm%20for%20Randomized%20Linear%20Algebra" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -444,7 +454,7 @@
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=https://y2p.github.io/publication/2020nov/&amp;t=Graph%20Tikhonov%20Regularization%20and%20Interpolation%20via%20Random%20Spanning%20Forests" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=https://y2p.github.io/publication/phdthesis/&amp;t=Wilson&amp;#39;s%20Algorithm%20for%20Randomized%20Linear%20Algebra" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook-f"></i>
         </a>
       </li>
@@ -457,7 +467,7 @@
       
       
       <li>
-        <a href="mailto:?subject=Graph%20Tikhonov%20Regularization%20and%20Interpolation%20via%20Random%20Spanning%20Forests&amp;body=https://y2p.github.io/publication/2020nov/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=Wilson&amp;#39;s%20Algorithm%20for%20Randomized%20Linear%20Algebra&amp;body=https://y2p.github.io/publication/phdthesis/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -470,7 +480,7 @@
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https://y2p.github.io/publication/2020nov/&amp;title=Graph%20Tikhonov%20Regularization%20and%20Interpolation%20via%20Random%20Spanning%20Forests" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=https://y2p.github.io/publication/phdthesis/&amp;title=Wilson&amp;#39;s%20Algorithm%20for%20Randomized%20Linear%20Algebra" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -483,7 +493,7 @@
       
       
       <li>
-        <a href="https://web.whatsapp.com/send?text=Graph%20Tikhonov%20Regularization%20and%20Interpolation%20via%20Random%20Spanning%20Forests%20https://y2p.github.io/publication/2020nov/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="https://web.whatsapp.com/send?text=Wilson&amp;#39;s%20Algorithm%20for%20Randomized%20Linear%20Algebra%20https://y2p.github.io/publication/phdthesis/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -496,7 +506,7 @@
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=https://y2p.github.io/publication/2020nov/&amp;title=Graph%20Tikhonov%20Regularization%20and%20Interpolation%20via%20Random%20Spanning%20Forests" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=https://y2p.github.io/publication/phdthesis/&amp;title=Wilson&amp;#39;s%20Algorithm%20for%20Randomized%20Linear%20Algebra" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
@@ -540,9 +550,16 @@
 
 
 
-<a class="btn btn-outline-primary my-1 mr-1" href="https://arxiv.org/pdf/2011.10450.pdf" target="_blank" rel="noopener">
+<a class="btn btn-outline-primary my-1 mr-1" href="/articles/thesis.pdf" target="_blank" rel="noopener">
   PDF
 </a>
+
+
+
+
+
+
+
 
 
 
@@ -551,32 +568,21 @@
   
     
   
-<a class="btn btn-outline-primary my-1 mr-1" href="https://gricad-gitlab.univ-grenoble-alpes.fr/pilavciy/rsf_sipn_codes" target="_blank" rel="noopener">
-  Code
+<a class="btn btn-outline-primary my-1 mr-1" href="/files/slides/thesis.pdf" target="_blank" rel="noopener">
+  Slides
 </a>
 
 
 
 
-
-
-
-
-
-
-
-
-<a class="btn btn-outline-primary my-1 mr-1" href="https://doi.org/10.1109/TSIPN.2021.3084879" target="_blank" rel="noopener">
-  DOI
-</a>
 
 
 
 </div>
 
 
-      
-      
+    </div>
+    
     </div>
   </div>
 </div>
@@ -585,7 +591,10 @@
 
     
     <h3>Abstract</h3>
-    <p class="pub-abstract" itemprop="text">Novel Monte Carlo estimators are proposed to solve both the Tikhonov regularization (TR) and the interpolation problems on graphs. These estimators are based on random spanning forests (RSF), the theoretical properties of which enable to analyze the estimators' theoretical mean and variance. We also show how to perform hyperparameter tuning for these RSF-based estimators. TR is a component in many well-known algorithms, and we show how the proposed estimators can be easily adapted to avoid expensive intermediate steps in generalized semi-supervised learning, label propagation, Newton&rsquo;s method and iteratively reweighted least squares. In the experiments, we illustrate the proposed methods on several problems and provide observations on their run time.</p>
+    <p class="pub-abstract" itemprop="text"><p>An extensive range of problems in machine learning deals with data structured over networks/graphs. The examples vary from drug discovery to traffic forecasting, social network analysis to recommender systems, or epidemic analysis to natural language processing. Along with the exploding size and number of data, a big chunk of the proposed algorithms has focused on analyzing, representing and leveraging the network structures in the last decades. In many of them, the graph Laplacian is the central object. They are notable matrix representations of graphs that relate to various aspects. For example, by analyzing the Laplacian algebraically, one can measure the connectivity, count the number of spanning trees or generate a visualization of a graph. Further examples can be found in the problems of node clustering, graph sparsification, signal processing on graphs and many more. However, the algebraic analysis of Laplacian can be frustratingly time-consuming if the graph consists of a large number of nodes. Despite many numerical tools specialized for the graph Laplacian, in certain cases, the computational time remains one of the main issues.</p>
+<p>Random spanning forests (RSFs), a random process on graphs, is a probabilistic tool for analyzing graphs with strong links with the Laplacian. In a nutshell, RSFs provide meaningful random sketches (spanning forests) of the graph to analyze some properties of interest. These sketches are cheap to obtain by a variant of Wilson&rsquo;s algorithm. Moreover, by only looking at a few of them, one can deduce significant statistical and/or algebraic information on the overall graph. The existing applications of RSFs, including graph wavelet analysis, semi-supervised learning on graphs or centrality analysis, show that RSFs provide useful information while binding diverse aspects of graphs.</p>
+<p>In this manuscript, we present ways of leveraging the rich connections between RSFs and the graph Laplacian to speed up the algebraic analysis. In doing so, we propose randomized algorithms to approximate several quantities of interest, such as the regularized inverse of the Laplacian or effective resistances. Interestingly, these quantities are required in a wide range of applications on graphs, including graph signal filtering, hyper-parameter tuning, graph-based optimization and sparsification. We illustrate these methods on real-life networks and compare them with state-of-the-art methods.</p>
+</p>
     
 
     
@@ -596,8 +605,8 @@
           <div class="col-12 col-md-9">
             
             
-            <a href="/publication/#2">
-              Journal article
+            <a href="/publication/#7">
+              Thesis
             </a>
             
           </div>
@@ -608,30 +617,12 @@
     
 
     
-    <div class="row">
-      <div class="col-md-1"></div>
-      <div class="col-md-10">
-        <div class="row">
-          <div class="col-12 col-md-3 pub-row-heading">Publication</div>
-          <div class="col-12 col-md-9">IEEE Transactions on Signal and Information Processing over Networks</div>
-        </div>
-      </div>
-      <div class="col-md-1"></div>
-    </div>
-    <div class="d-md-none space-below"></div>
-    
 
     <div class="space-below"></div>
 
     <div class="article-style"></div>
 
     
-
-<div class="article-tags">
-  
-  <a class="badge badge-light" href="/tags/selected/">selected</a>
-  
-</div>
 
 
     
