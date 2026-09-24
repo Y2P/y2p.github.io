@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Yusuf Yigit PILAVCI</title>
+    <link>https://y2p.github.io/</link>
+    <description>Recent content on Yusuf Yigit PILAVCI</description>
+    <generator>Source Themes academia (https://sourcethemes.com/academic/)</generator>
+    <language>en-us</language>
+    <copyright>Copyright &amp;copy; {year}</copyright>
+    <lastBuildDate>Mon, 29 Aug 2022 00:00:00 +0000</lastBuildDate>
+    
+	    <atom:link href="https://y2p.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Publications</title>
+      <link>https://y2p.github.io/publication/</link>
+      <pubDate>Mon, 29 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://y2p.github.io/publication/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Authors</title>
+      <link>https://y2p.github.io/authors/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://y2p.github.io/authors/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
